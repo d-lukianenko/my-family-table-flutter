@@ -4,7 +4,7 @@ This is a Flutter demo of **My Family Table**, which I’m also building in Angu
 
 ### 🚀 Run locally
 
-**1. Clone the repo (or this folder if it's a subproject)**
+**1. Clone the repo**
 
 * git clone https://github.com/d-lukianenko/my-family-table-flutter.git
 
