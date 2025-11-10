@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_family_table_flutter/widgets/recipe_card.dart';
-import '../data/recipes_data.dart';
+import 'package:my_family_table_flutter/ui/core/recipe_card.dart';
+import '../../data/recipes_data.dart';
 
-class RecipeListPage extends StatelessWidget {
-  const RecipeListPage({super.key});
+class RecipesHomePage extends StatelessWidget {
+  const RecipesHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

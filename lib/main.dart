@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_family_table_flutter/screens/recipe_list_page.dart';
+import 'package:my_family_table_flutter/ui/pages/recipes_home_page.dart';
 
 void main() {
   runApp(const MyFamilyTableApp());
@@ -21,7 +21,7 @@ class MyFamilyTableApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const RecipeListPage(),
+      home: const RecipesHomePage(),
     );
   }
 }
