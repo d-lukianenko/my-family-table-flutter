@@ -27,7 +27,6 @@ class MyFamilyTableAppBar extends StatelessWidget
           style: GoogleFonts.playfairDisplay(
             fontSize: 22,
             fontWeight: FontWeight.w600,
-            color: Colors.black,
           ),
         ),
       ),
