@@ -24,27 +24,30 @@ class RecipeDetailPage extends StatelessWidget {
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
-            final isSmallScreen = constraints.maxWidth < 600;
-            final topPadding = isSmallScreen ? 24.0 : 48.0;
             return Align(
               alignment: Alignment.topCenter,
               child: SingleChildScrollView(
-                padding: EdgeInsets.fromLTRB(16, topPadding, 16, 64),
+                padding: EdgeInsets.fromLTRB(22, 24, 16, 32),
                 child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 768),
+                  constraints: const BoxConstraints(maxWidth: 640),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TextButton(
+                      TextButton.icon(
                         onPressed: () => context.go('/recipes'),
+                        icon: const Icon(Icons.arrow_back, size: 18),
+                        label: const Text('Back to recipes'),
                         style: TextButton.styleFrom(
-                          foregroundColor: const Color(0xFF059669),
-                          backgroundColor: const Color(0xFFD1FAE5),
+                          foregroundColor: const Color(0xFF047857),
+                          backgroundColor: const Color(0xFFDCFCE7),
                           padding: const EdgeInsets.all(14),
-                        ),
-                        child: const Text(
-                          '← Back to recipes',
-                          style: TextStyle(fontSize: 16),
+                          textStyle: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                       ),
 

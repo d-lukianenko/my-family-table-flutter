@@ -22,12 +22,21 @@ class MyFamilyTableAppBar extends StatelessWidget
         hoverColor: Colors.transparent,
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
-        child: Text(
-          'My Family Table',
-          style: GoogleFonts.playfairDisplay(
-            fontSize: 22,
-            fontWeight: FontWeight.w600,
-          ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(width: 6),
+            const Icon(Icons.favorite, color: Color(0xFF10B981), size: 18),
+            const SizedBox(width: 6),
+            Text(
+              'My Family Table',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: 22,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
         ),
       ),
     );
