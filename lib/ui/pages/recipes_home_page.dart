@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:my_family_table_flutter/ui/core/my_family_table_app_bar.dart';
 import 'package:my_family_table_flutter/ui/core/recipe_card.dart';
 import '../../data/recipes_data.dart';
 
@@ -10,20 +10,7 @@ class RecipesHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        surfaceTintColor: Colors.transparent,
-        scrolledUnderElevation: 0,
-        shape: Border(bottom: BorderSide(color: Color(0xFFE5E5E5))),
-        centerTitle: false,
-        title: Text(
-          'My Family Table',
-          style: GoogleFonts.playfairDisplay(
-            fontSize: 22,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
+      appBar: const MyFamilyTableAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           final width = constraints.maxWidth;
