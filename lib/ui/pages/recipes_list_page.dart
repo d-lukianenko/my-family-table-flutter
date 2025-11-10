@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_family_table_flutter/models/recipe_summary.dart';
 import 'package:my_family_table_flutter/ui/core/recipe_card.dart';
 import '../../data/recipes_data.dart';
 
@@ -39,7 +40,7 @@ class RecipesListPage extends StatelessWidget {
                 ),
                 itemCount: recipes.length,
                 itemBuilder: (context, index) {
-                  final recipe = recipes[index];
+                  final RecipeSummary recipe = recipes[index];
                   return RecipeCard(
                     recipe: recipe,
                     onTap: () {
