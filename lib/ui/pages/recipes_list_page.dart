@@ -9,50 +9,47 @@ class RecipesListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          final width = constraints.maxWidth;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final width = constraints.maxWidth;
 
-          int crossAxisCount;
-          if (width < 600) {
-            crossAxisCount = 1;
-          } else if (width < 1024) {
-            crossAxisCount = 2;
-          } else {
-            crossAxisCount = 3;
-          }
+        int crossAxisCount;
+        if (width < 600) {
+          crossAxisCount = 1;
+        } else if (width < 1024) {
+          crossAxisCount = 2;
+        } else {
+          crossAxisCount = 3;
+        }
 
-          const maxContentWidth = 1200.0;
+        const maxContentWidth = 1200.0;
 
-          return Align(
-            alignment: Alignment.topCenter,
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: maxContentWidth),
-              child: GridView.builder(
-                padding: const EdgeInsets.fromLTRB(16, 24, 16, 32),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: crossAxisCount,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  mainAxisExtent: 360,
-                ),
-                itemCount: recipes.length,
-                itemBuilder: (context, index) {
-                  final RecipeSummary recipe = recipes[index];
-                  return RecipeCard(
-                    recipe: recipe,
-                    onTap: () {
-                      context.go('/recipes/${recipe.id}');
-                    },
-                  );
-                },
+        return Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: maxContentWidth),
+            child: GridView.builder(
+              padding: const EdgeInsets.fromLTRB(16, 24, 16, 32),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount,
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+                mainAxisExtent: 360,
               ),
+              itemCount: recipes.length,
+              itemBuilder: (context, index) {
+                final RecipeSummary recipe = recipes[index];
+                return RecipeCard(
+                  recipe: recipe,
+                  onTap: () {
+                    context.go('/recipes/${recipe.id}');
+                  },
+                );
+              },
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

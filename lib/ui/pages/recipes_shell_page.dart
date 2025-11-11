@@ -10,6 +10,7 @@ class RecipesShellPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyFamilyTableAppBar(),
+      backgroundColor: Colors.white,
       body: SafeArea(child: child),
     );
   }
